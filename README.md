@@ -10,6 +10,12 @@ After running an initial `npm install` to install all node modules, simply execu
 
 If you want to enforce a code formatting according to the setup within `./prettierrc.json`, run `npm run format`.
 
+## Features
+
+-   The application is completely keyboard accessible and performs well on a screen reader.
+-   Light / dark themes according to the users' preferences.
+-   Page can be refreshed while preserving search results. This is currently done the simple way by storing in the local storage. But it could be enhanced with Next.js or react-dom-router features to hold the search result inside the URL.
+
 ## Technologies in Use
 
 -   [Vite](https://vitejs.dev/)
@@ -20,7 +26,7 @@ If you want to enforce a code formatting according to the setup within `./pretti
 
 ## About the Architecture of Components
 
-To be able to port this project later on to a pattern library like e.g. Storybook, all components are composed as:
+To be able to port this project later on in an easier fashion to a pattern library like e.g. Storybook, all components are composed as:
 
 1. Atoms - These atoms include basic HTML elements like form labels, inputs, buttons, and others that can’t be broken down any further without ceasing to be functional.
 2. Molecules - In interfaces, molecules are relatively simple groups of UI elements functioning together as a unit. For example, a form label, search input, and button can join together to create a search form molecule.

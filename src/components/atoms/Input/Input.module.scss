@@ -1,0 +1,15 @@
+/**
+ * # Input
+ */
+/**
+ * ## Imports
+ */
+
+@use '../../../assets/styles/abstracts' as *;
+
+/**
+ * ## Styles
+ */
+.input {
+    @extend %input;
+}

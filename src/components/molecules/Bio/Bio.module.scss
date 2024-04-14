@@ -1,0 +1,49 @@
+/**
+ * # Bio
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../../assets/styles/abstracts' as *;
+
+/**
+ * ## Styles
+ */
+.bio {
+    font-style: italic;
+    margin: 0;
+    order: 3;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint('s') {
+        margin-bottom: calc(var(--spacing) * 4);
+    }
+
+    &::before,
+    &::after {
+        content: '“';
+        font-family: 'Roboto', sans-serif;
+        font-size: 5rem;
+        left: -1rem;
+        opacity: 0.1;
+        position: absolute;
+        top: -1.25rem;
+        z-index: 1;
+    }
+
+    &::after {
+        bottom: -3rem;
+        content: '”';
+        left: unset;
+        right: 0.25rem;
+        top: unset;
+    }
+
+    &__paragraph {
+        margin-top: 0;
+        z-index: 2;
+    }
+}

@@ -1,0 +1,39 @@
+/**
+ * # User Search Styles
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../../assets/styles/abstracts/' as *;
+
+/**
+ * ## Styles
+ */
+.form {
+    margin-bottom: calc(var(--spacing) * 10);
+    width: 100%;
+
+    &__input {
+        @extend %input;
+        flex-grow: 1;
+        margin-bottom: var(--spacing);
+    }
+
+    &__button {
+        width: 100%;
+
+        @include breakpoint('s') {
+            max-width: calc(var(--spacing) * 50);
+        }
+    }
+}
+
+.body {
+    width: 100%;
+
+    @include breakpoint('s') {
+        display: flex;
+        gap: calc(var(--spacing) * 2);
+    }
+}

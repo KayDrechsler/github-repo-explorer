@@ -1,0 +1,15 @@
+/**
+ * # Dark Mode
+ */
+
+/**
+ * - Consider using the CSS native `light-dark()` function instead of this
+ * mixin, as soon as its browser support is improved.
+ * - https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+ */
+
+@mixin darkmode {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}

@@ -1,0 +1,39 @@
+/**
+ * # Button Element
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../../assets/styles/abstracts/' as *;
+
+/**
+ * # Styles
+ */
+.button {
+    background-color: var(--button-primary-bgColor-rest);
+    border: none;
+    border-radius: 0.25rem;
+    color: var(--button-primary-fgColor-rest);
+    cursor: pointer;
+    font-weight: bold;
+    height: 2.5rem;
+
+    &:hover {
+        background-color: var(--button-primary-bgColor-hover);
+    }
+
+    &:active {
+        background-color: var(--button-primary-bgColor-active);
+    }
+
+    &[disabled] {
+        background-color: var(--button-primary-bgColor-disabled);
+        color: var(--button-primary-fgColor-disabled);
+        cursor: not-allowed;
+    }
+
+    &__label {
+        margin-left: 0.25rem;
+    }
+}

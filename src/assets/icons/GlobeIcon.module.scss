@@ -1,0 +1,17 @@
+/**
+ * # Map Icon
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../assets/styles/abstracts' as *;
+
+/**
+ * ## Styles
+ */
+.icon {
+    @extend %icon-standard;
+    height: 0.875rem;
+    width: 0.875rem;
+}

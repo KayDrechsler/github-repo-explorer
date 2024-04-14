@@ -1,0 +1,22 @@
+/**
+ * # Github Logo
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../assets/styles/abstracts' as *;
+
+/**
+ * ## Styles
+ */
+.icon {
+    .path {
+        fill: var(--black);
+
+        @include darkmode {
+            fill: var(--white);
+            opacity: 0.25;
+        }
+    }
+}

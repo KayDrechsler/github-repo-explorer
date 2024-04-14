@@ -1,0 +1,11 @@
+/**
+ * - It is up for debate if this approach of forwarding all the abstracts
+ * should be done or if a more modular approach should be taken in the
+ * future, if the application would grow further.
+ */
+
+@forward '../abstracts/fonts';
+@forward '../abstracts/utilities';
+@forward '../abstracts/mediaqueries';
+@forward '../abstracts/darkmode';
+@forward '../abstracts/formElements';

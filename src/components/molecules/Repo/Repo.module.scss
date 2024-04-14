@@ -1,0 +1,68 @@
+/**
+ * # Repo
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../../assets/styles/abstracts/' as *;
+
+/**
+ * ## Styles
+ */
+.repo-item {
+    margin-bottom: calc(var(--spacing) * 8);
+
+    &:nth-of-type(n + 2) {
+        &::before {
+            background-color: var(--borderColor-default);
+            content: '';
+            display: block;
+            height: 0.063rem;
+            margin-bottom: calc(var(--spacing) * 6);
+            width: calc(100% - var(--spacing));
+            @include center-x;
+        }
+    }
+}
+
+.repo-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+.repo-name {
+    font-size: 1rem;
+    margin: 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: underline;
+    }
+
+    &__link {
+        float: left;
+        line-height: 1.4;
+        @extend %external-link;
+    }
+}
+
+.repo-stars {
+    color: var(--fgColor-muted);
+    margin: 0;
+
+    &__label {
+        margin-left: var(--spacing);
+    }
+}
+
+.repo-description {
+    color: var(--fgColor-muted);
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
+}

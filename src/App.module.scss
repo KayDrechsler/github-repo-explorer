@@ -1,0 +1,100 @@
+/**
+ * # App
+ */
+@use './assets/styles/abstracts' as *;
+
+/**
+ * ## Styles
+ */
+
+/* - (`<html>` element) */
+:root {
+    /**
+     * ## Colors
+     */
+    --white: #fff;
+    --whiteRgb: 255, 255, 255;
+    --black: #000;
+    --black-Rgb: 0, 0, 0;
+    --button-star-iconColor: #eac54f;
+
+    /**
+     * ## Borders
+     */
+    --borderRadius-medium: 0.375rem;
+
+    /**
+     * - 🌞 Bright mode
+     */
+    @media (prefers-color-scheme: light) {
+        --bgColor-default: #fff;
+        --bgColor-accent: #1f6feb;
+        --bgColor-inset: --bgColor-default;
+        --bgColor-muted: #f6f8fa;
+        --borderColor-default: #d0d7de;
+        --button-primary-bgColor-rest: #1f883d;
+        --button-primary-bgColor-hover: #1c8139;
+        --button-primary-bgColor-active: #197935;
+        --button-primary-bgColor-disabled: #95d8a6;
+        --button-primary-borderColor-rest: #1f232826;
+        --button-primary-borderColor-hover: #1f232826;
+        --button-primary-borderColor-active: #1f232826;
+        --button-primary-fgColor-rest: #fff;
+        --fgColor-accent: #0969da;
+        --fgColor-default: #1f2328;
+        --fgColor-muted: #636c76;
+        --focus-outlineColor: #0969da;
+    }
+
+    /**
+     * - 🌛 Dark mode
+     */
+    @media (prefers-color-scheme: dark) {
+        --bgColor-default: #0d1117;
+        --bgColor-accent: #1f6feb;
+        --bgColor-inset: #010409;
+        --bgColor-muted: #161b22;
+        --borderColor-default: #30363d;
+        --button-primary-bgColor-rest: #238636;
+        --button-primary-bgColor-hover: #29903b;
+        --button-primary-bgColor-active: #2e9a40;
+        --button-primary-bgColor-disabled: #105823;
+        --button-primary-borderColor-rest: #f0f6fc1a;
+        --button-primary-borderColor-hover: #f0f6fc1a;
+        --button-primary-borderColor-active: #f0f6fc1a;
+        --button-primary-borderColor-disabled: #105823;
+        --button-primary-fgColor-rest: #fff;
+        --fgColor-accent: #4493f8;
+        --fgColor-default: #e6edf3;
+        --fgColor-muted: #848d97;
+        --focus-outlineColor: #1f6feb;
+    }
+
+    /**
+     * ## Spacing
+     */
+    --spacing: 0.25rem;
+}
+
+:global(#root) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.app {
+    background-color: var(--bgColor-inset);
+    color: var(--fgColor-default);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-synthesis: none;
+    max-width: 100%;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:global(.centerwrapper) {
+    @extend %centerwrapper;
+}

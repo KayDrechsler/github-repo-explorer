@@ -1,0 +1,21 @@
+/**
+ * # Search
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../../assets/styles/abstracts' as *;
+
+/**
+ * ## Styles
+ */
+.search {
+    padding-top: calc(var(--spacing) * 10);
+    text-align: center;
+}
+
+.headline {
+    text-align: center;
+    width: 100%;
+}

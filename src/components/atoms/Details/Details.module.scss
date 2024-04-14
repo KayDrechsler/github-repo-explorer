@@ -1,0 +1,62 @@
+/**
+ * # Details Element
+ */
+
+/**
+ * ## Imports
+ */
+@use '../../../assets/styles/abstracts/' as *;
+
+/**
+ * ## Styles
+ */
+.details {
+    position: relative;
+
+    /**
+     * ### Open/Close icons
+     */
+    &::after {
+        align-items: center;
+        content: '+';
+        display: flex;
+        color: var(--fgColor-default);
+        font-size: 1.5rem;
+        height: calc(var(--spacing) * 10 - 0.125rem);
+        justify-content: center;
+        line-height: 1;
+        /* - Correcting the vertical alignment. */
+        padding-bottom: 0.125rem;
+        pointer-events: none;
+        position: absolute;
+        right: var(--spacing);
+        text-indent: 1px;
+        top: calc(var(--spacing) * 3);
+        width: calc(var(--spacing) * 10);
+    }
+
+    &:not([open]) {
+        &::after {
+            content: '+';
+        }
+    }
+
+    &[open] {
+        &::after {
+            content: '-';
+        }
+    }
+}
+
+.summary {
+    &:hover {
+        cursor: pointer;
+    }
+
+    /**
+     * ### Removing the default open/close ➡️ icon.
+     */
+    &::marker {
+        content: '';
+    }
+}
